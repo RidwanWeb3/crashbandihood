@@ -184,7 +184,7 @@ function Index() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 pr-8">
               {Array.from({ length: 8 }).map((_, j) => (
-                <span key={j} className="text-chunky text-2xl md:text-3xl flex items-center gap-6">
+                <span key={j} className="text-chunky text-lg sm:text-2xl md:text-3xl flex items-center gap-6">
                   🏁 CRASH BANDIHOOD 🏆 $CBH 💎 DIAMOND HEARTS DIAMOND HANDS 🛞
                 </span>
               ))}
@@ -194,7 +194,7 @@ function Index() {
       </div>
 
       {/* ABOUT */}
-      <section id="about" className="relative py-24 px-4">
+      <section id="about" className="relative py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
             <Ribbon>🏁 ABOUT $CBH 🏁</Ribbon>
@@ -287,7 +287,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* TOKENOMICS */}
-      <section id="tokenomics" className="relative py-24 px-4">
+      <section id="tokenomics" className="relative py-16 md:py-24 px-4">
         <div className="absolute inset-0 pointer-events-none opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})` }} />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
@@ -357,7 +357,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* ROADMAP */}
-      <section id="roadmap" className="relative py-24 px-4">
+      <section id="roadmap" className="relative py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
             <Ribbon>🏁 ROADMAP 🏁</Ribbon>
@@ -402,7 +402,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* COMMUNITY */}
-      <section id="community" className="relative py-24 px-4 overflow-hidden">
+      <section id="community" className="relative py-16 md:py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})`, filter: "blur(2px)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.15 0.1 145 / 0.7), oklch(0.22 0.12 145 / 0.9))" }} />
         <div className="relative max-w-4xl mx-auto text-center">
