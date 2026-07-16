@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/cbh_logo.jpeg.asset.json";
-import heroAsset from "@/assets/cbh_assets.jpeg.asset.json";
-import videoAsset from "@/assets/cbh_video.mp4.asset.json";
-import aboutFrameAsset from "@/assets/about_frame.jpeg.asset.json";
+import logoAsset from "@/assets/cbh_logo.jpeg";
+import heroAsset from "@/assets/cbh_assets.jpeg";
+import videoAsset from "@/assets/cbh_video.mp4";
+import aboutFrameAsset from "@/assets/about_frame.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -100,7 +100,7 @@ function Index() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? "bg-[oklch(0.15_0.1_145_/_0.85)] backdrop-blur-lg border-b border-primary/30 py-2" : "py-4"}`}>
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
           <a href="#home" className="flex items-center gap-3 relative animate-shine rounded-full">
-            <img src={logoAsset.url} alt="CBH" className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-primary glow-gold animate-bob" style={{ background: "oklch(0.32 0.14 145)" }} />
+            <img src={logoAsset} alt="CBH" className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-primary glow-gold animate-bob" style={{ background: "oklch(0.32 0.14 145)" }} />
             <span className="hidden sm:block text-chunky text-xl md:text-2xl">CBH</span>
           </a>
           <div className="hidden md:flex items-center gap-6">
@@ -128,8 +128,8 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16">
         <div className="absolute inset-0 overflow-hidden">
-          <video autoPlay muted loop playsInline poster={heroAsset.url} className="w-full h-full object-cover">
-            <source src={videoAsset.url} type="video/mp4" />
+          <video autoPlay muted loop playsInline poster={heroAsset} className="w-full h-full object-cover">
+            <source src={videoAsset} type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{
             background: "linear-gradient(180deg, oklch(0.15 0.1 145 / 0.4) 0%, oklch(0.15 0.1 145 / 0.7) 50%, oklch(0.15 0.1 145 / 0.95) 100%)"
@@ -169,8 +169,8 @@ function Index() {
           </div>
 
           <div className="hidden lg:block relative animate-bob">
-            <img src={heroAsset.url} alt="Crash Bandihood kart race" className="rounded-3xl border-4 border-primary/60 glow-green w-full" />
-            <img src={logoAsset.url} alt="" className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-4 border-primary glow-gold animate-spin-slow" />
+            <img src={heroAsset} alt="Crash Bandihood kart race" className="rounded-3xl border-4 border-primary/60 glow-green w-full" />
+            <img src={logoAsset} alt="" className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-4 border-primary glow-gold animate-spin-slow" />
           </div>
         </div>
       </section>
@@ -203,7 +203,7 @@ function Index() {
           {/* Mobile: image on top, readable text card below. Desktop: text overlaid on parchment. */}
           <div data-reveal className="relative mx-auto max-w-6xl">
             <img
-              src={aboutFrameAsset.url}
+              src={aboutFrameAsset}
               alt="Crash Bandihood jungle temple scroll"
               className="w-full h-auto select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
             />
@@ -288,7 +288,7 @@ function Index() {
 
       {/* TOKENOMICS */}
       <section id="tokenomics" className="relative py-16 md:py-24 px-4">
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})` }} />
+        <div className="absolute inset-0 pointer-events-none opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset})` }} />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
             <Ribbon>🏁 TOKENOMICS 🏁</Ribbon>
@@ -403,7 +403,7 @@ function Index() {
 
       {/* COMMUNITY */}
       <section id="community" className="relative py-16 md:py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})`, filter: "blur(2px)" }} />
+        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset})`, filter: "blur(2px)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.15 0.1 145 / 0.7), oklch(0.22 0.12 145 / 0.9))" }} />
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="mb-8" data-reveal><Ribbon>🏁 JOIN THE CREW 🏁</Ribbon></div>
@@ -434,7 +434,7 @@ function Index() {
       <footer className="relative border-t-4 border-primary bg-black/70 py-10 px-4">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="CBH" className="w-14 h-14 rounded-full border-2 border-primary" />
+            <img src={logoAsset} alt="CBH" className="w-14 h-14 rounded-full border-2 border-primary" />
             <div>
               <p className="text-chunky text-xl">CBH</p>
               <p className="text-xs text-white/60">Crash Bandihood © 2026</p>

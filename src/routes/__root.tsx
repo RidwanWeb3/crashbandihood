@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "../assets/cbh_logo.jpeg.asset.json";
+import logoAsset from "../assets/cbh_logo.jpeg";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -75,9 +75,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Crash Bandihood ($CBH) — Diamond Hearts, Diamond Hands" },
       { property: "og:description", content: "$CBH — A racing-arcade crypto token built on nostalgia, community, and diamond hands." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoAsset.url },
+      { property: "og:image", content: logoAsset },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logoAsset.url },
+      { name: "twitter:image", content: logoAsset },
       { name: "twitter:title", content: "Crash Bandihood ($CBH)" },
       { name: "twitter:description", content: "Diamond Hearts. Diamond Hands." },
       { name: "theme-color", content: "#0B5C1E" },
