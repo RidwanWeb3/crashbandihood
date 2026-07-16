@@ -207,26 +207,49 @@ function Index() {
             <Ribbon>🏁 ABOUT $CBH 🏁</Ribbon>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div data-reveal className="relative mx-auto max-w-6xl">
+            <img
+              src={aboutFrameAsset.url}
+              alt="Crash Bandihood jungle temple scroll"
+              className="w-full h-auto select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+            />
+            {/* Text overlaid on the parchment area */}
             <div
-              ref={bannerRef}
-              data-reveal
-              className="relative rounded-3xl overflow-hidden border-4 border-primary/60 glow-green aspect-[16/10] bg-cover bg-center"
-              style={{ backgroundImage: `url(${bannerAsset.url})` }}
+              className="absolute flex items-center justify-center"
+              style={{ top: "10%", left: "22%", right: "12%", bottom: "14%" }}
             >
-              <img src={bannerAsset.url} alt="Crash Bandihood banner" className="opacity-0 w-full h-full" />
-            </div>
-            <div data-reveal className="space-y-5 text-white/90 text-lg leading-relaxed">
-              <h3 className="text-chunky text-4xl md:text-5xl">A LEGENDARY RACE</h3>
-              <p>
-                $CBH revs to life from the sun-baked memories of classic kart-racing arcades — that unmistakable rush when the countdown flashed <span className="text-primary font-bold">3-2-1-GO</span> and pixel dust exploded off the starting line.
-              </p>
-              <p>
-                We're not chasing pumps. We're chasing <span className="text-primary font-bold">timeless memories</span>. A racing community welded together by <span className="text-primary font-bold">diamond hearts</span> and <span className="text-primary font-bold">diamond hands</span> — the kind of holders who see red candles as speed bumps, not stop signs.
-              </p>
-              <p>
-                The chart is our racetrack. The roadmap is our finish line. And every holder is a driver behind the wheel of something legendary. Buckle up.
-              </p>
+              <div className="w-full h-full flex flex-col justify-center text-center px-[2%]"
+                style={{ color: "oklch(0.25 0.12 40)" }}>
+                <h3 className="font-black leading-none tracking-tight"
+                  style={{
+                    fontFamily: "var(--font-display, 'Bungee', system-ui)",
+                    fontSize: "clamp(1rem, 3.2vw, 3rem)",
+                    color: "oklch(0.35 0.22 25)",
+                    textShadow: "2px 2px 0 rgba(255,220,140,0.6)"
+                  }}>
+                  A LEGENDARY RACE
+                </h3>
+                <div className="mt-[2%] space-y-[1.5%] font-bold"
+                  style={{ fontSize: "clamp(0.55rem, 1.35vw, 1.05rem)", lineHeight: 1.45 }}>
+                  <p>
+                    $CBH revs to life from sun-baked memories of classic kart-racing arcades —
+                    that unmistakable rush when the countdown flashed{" "}
+                    <span style={{ color: "oklch(0.5 0.24 25)" }}>3-2-1-GO</span> and pixel dust
+                    exploded off the starting line.
+                  </p>
+                  <p className="hidden sm:block">
+                    We're not chasing pumps. We're chasing{" "}
+                    <span style={{ color: "oklch(0.5 0.24 25)" }}>timeless memories</span> — a
+                    community welded together by{" "}
+                    <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hearts</span> and{" "}
+                    <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hands</span>.
+                  </p>
+                  <p className="hidden md:block">
+                    The chart is our racetrack. The roadmap is our finish line. Every holder is a
+                    driver behind the wheel of something legendary. Buckle up.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
