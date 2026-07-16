@@ -142,8 +142,8 @@ function Index() {
               <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/60 bg-black/40 px-4 py-1.5 mb-4 backdrop-blur">
                 <span className="text-primary text-sm font-bold">🏁 $CBH • LIVE ON THE TRACK</span>
               </div>
-              <h1 className="text-chunky text-6xl md:text-8xl lg:text-9xl leading-[0.9]">CRASH</h1>
-              <h1 className="text-chunky-white text-4xl md:text-6xl lg:text-7xl leading-[0.9] mt-2">BANDIHOOD</h1>
+              <h1 className="text-chunky text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.9]">CRASH</h1>
+              <h1 className="text-chunky-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] mt-2">BANDIHOOD</h1>
               <p className="mt-6 text-xl md:text-2xl font-bold text-primary" style={{ textShadow: "2px 2px 0 #000" }}>
                 Diamond Hearts. Diamond Hands.
               </p>
