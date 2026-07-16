@@ -9,7 +9,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const BUY_URL = "https://pons.family";
+const BUY_URL = "https://pons.family/launchpad/0xb336ede5190d8d276ee9e9a51c6382c29d2ceaa2";
+const CHART_URL = "https://dexscreener.com/robinhood/0x26f22372c0c6614a25b1e52ccc2b93904c08fcf6";
 
 function Ribbon({ children }: { children: React.ReactNode }) {
   return (
@@ -79,7 +80,7 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const CA = "Coming Soon";
+  const CA = "0xb336eDe5190D8D276eE9e9A51C6382c29d2CeAA2";
   const copyCA = () => {
     navigator.clipboard.writeText(CA);
     setCopied(true);
@@ -154,6 +155,7 @@ function Index() {
 
             <div className="mt-8 flex flex-wrap gap-4 animate-race-in" style={{ animationDelay: "0.2s" }}>
               <GoldButton href={BUY_URL} external>🏆 Buy $CBH</GoldButton>
+              <GoldButton href={CHART_URL} external>📈 Chart</GoldButton>
               <CrimsonButton onClick={() => setShowModal(true)}>🎮 Play Game</CrimsonButton>
             </div>
 
