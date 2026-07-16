@@ -4,6 +4,7 @@ import logoAsset from "@/assets/cbh_logo.jpeg.asset.json";
 import bannerAsset from "@/assets/cbh_banner.jpeg.asset.json";
 import heroAsset from "@/assets/cbh_assets.jpeg.asset.json";
 import videoAsset from "@/assets/cbh_video.mp4.asset.json";
+import aboutFrameAsset from "@/assets/about_frame.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
