@@ -142,8 +142,8 @@ function Index() {
               <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/60 bg-black/40 px-4 py-1.5 mb-4 backdrop-blur">
                 <span className="text-primary text-sm font-bold">🏁 $CBH • LIVE ON THE TRACK</span>
               </div>
-              <h1 className="text-chunky text-6xl md:text-8xl lg:text-9xl leading-[0.9]">CRASH</h1>
-              <h1 className="text-chunky-white text-4xl md:text-6xl lg:text-7xl leading-[0.9] mt-2">BANDIHOOD</h1>
+              <h1 className="text-chunky text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.9]">CRASH</h1>
+              <h1 className="text-chunky-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[0.9] mt-2">BANDIHOOD</h1>
               <p className="mt-6 text-xl md:text-2xl font-bold text-primary" style={{ textShadow: "2px 2px 0 #000" }}>
                 Diamond Hearts. Diamond Hands.
               </p>
@@ -184,7 +184,7 @@ function Index() {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 pr-8">
               {Array.from({ length: 8 }).map((_, j) => (
-                <span key={j} className="text-chunky text-2xl md:text-3xl flex items-center gap-6">
+                <span key={j} className="text-chunky text-lg sm:text-2xl md:text-3xl flex items-center gap-6">
                   🏁 CRASH BANDIHOOD 🏆 $CBH 💎 DIAMOND HEARTS DIAMOND HANDS 🛞
                 </span>
               ))}
@@ -194,21 +194,22 @@ function Index() {
       </div>
 
       {/* ABOUT */}
-      <section id="about" className="relative py-24 px-4">
+      <section id="about" className="relative py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
             <Ribbon>🏁 ABOUT $CBH 🏁</Ribbon>
           </div>
 
+          {/* Mobile: image on top, readable text card below. Desktop: text overlaid on parchment. */}
           <div data-reveal className="relative mx-auto max-w-6xl">
             <img
               src={aboutFrameAsset.url}
               alt="Crash Bandihood jungle temple scroll"
               className="w-full h-auto select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
             />
-            {/* Text overlaid on the parchment area */}
+            {/* Text overlaid on the parchment area (desktop / tablet only) */}
             <div
-              className="absolute flex items-center justify-center"
+              className="hidden md:flex absolute items-center justify-center"
               style={{ top: "10%", left: "22%", right: "12%", bottom: "14%" }}
             >
               <div className="w-full h-full flex flex-col justify-center text-center px-[2%]"
@@ -216,33 +217,50 @@ function Index() {
                 <h3 className="font-black leading-none tracking-tight"
                   style={{
                     fontFamily: "var(--font-display, 'Bungee', system-ui)",
-                    fontSize: "clamp(1rem, 3.2vw, 3rem)",
+                    fontSize: "clamp(1.25rem, 3.2vw, 3rem)",
                     color: "oklch(0.35 0.22 25)",
                     textShadow: "2px 2px 0 rgba(255,220,140,0.6)"
                   }}>
                   A LEGENDARY RACE
                 </h3>
                 <div className="mt-[2%] space-y-[1.5%] font-bold"
-                  style={{ fontSize: "clamp(0.55rem, 1.35vw, 1.05rem)", lineHeight: 1.45 }}>
+                  style={{ fontSize: "clamp(0.7rem, 1.35vw, 1.05rem)", lineHeight: 1.45 }}>
                   <p>
                     $CBH revs to life from sun-baked memories of classic kart-racing arcades —
                     that unmistakable rush when the countdown flashed{" "}
                     <span style={{ color: "oklch(0.5 0.24 25)" }}>3-2-1-GO</span> and pixel dust
                     exploded off the starting line.
                   </p>
-                  <p className="hidden sm:block">
+                  <p>
                     We're not chasing pumps. We're chasing{" "}
                     <span style={{ color: "oklch(0.5 0.24 25)" }}>timeless memories</span> — a
                     community welded together by{" "}
                     <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hearts</span> and{" "}
                     <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hands</span>.
                   </p>
-                  <p className="hidden md:block">
+                  <p className="hidden lg:block">
                     The chart is our racetrack. The roadmap is our finish line. Every holder is a
                     driver behind the wheel of something legendary. Buckle up.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Mobile-only readable lore card (parchment-styled) */}
+          <div data-reveal className="md:hidden -mt-4 mx-auto max-w-md rounded-2xl border-4 p-5 text-center"
+            style={{ background: "linear-gradient(180deg, oklch(0.92 0.08 80), oklch(0.85 0.11 70))", borderColor: "oklch(0.45 0.15 40)", color: "oklch(0.25 0.12 40)" }}>
+            <h3 className="text-2xl font-black tracking-tight mb-3"
+              style={{ fontFamily: "var(--font-display, 'Bungee', system-ui)", color: "oklch(0.35 0.22 25)" }}>
+              A LEGENDARY RACE
+            </h3>
+            <div className="space-y-3 text-sm font-semibold leading-snug">
+              <p>
+                $CBH revs to life from sun-baked memories of classic kart-racing arcades — that rush when the countdown flashed <span style={{ color: "oklch(0.5 0.24 25)" }}>3-2-1-GO</span>.
+              </p>
+              <p>
+                We chase <span style={{ color: "oklch(0.5 0.24 25)" }}>timeless memories</span>, welded by <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hearts</span> &amp; <span style={{ color: "oklch(0.5 0.24 25)" }}>diamond hands</span>.
+              </p>
             </div>
           </div>
 
@@ -269,7 +287,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* TOKENOMICS */}
-      <section id="tokenomics" className="relative py-24 px-4">
+      <section id="tokenomics" className="relative py-16 md:py-24 px-4">
         <div className="absolute inset-0 pointer-events-none opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})` }} />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
@@ -301,22 +319,34 @@ function Index() {
                 <div className="flex justify-center">
                   <Speedometer />
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-5 text-center md:text-left">
                   <h3 className="text-chunky text-3xl md:text-4xl">DISTRIBUTION</h3>
-                  {[
-                    { label: "Liquidity Pool", pct: 85, color: "var(--gold)" },
-                    { label: "Community Rewards", pct: 10, color: "var(--jungle)" },
-                    { label: "Marketing / CEX", pct: 5, color: "var(--crimson)" },
-                  ].map((d) => (
-                    <div key={d.label}>
-                      <div className="flex justify-between text-sm font-bold text-white/90 mb-1">
-                        <span>{d.label}</span><span>{d.pct}%</span>
-                      </div>
-                      <div className="h-3 rounded-full bg-black/50 overflow-hidden border border-primary/30">
-                        <div className="h-full rounded-full" style={{ width: `${d.pct}%`, background: d.color, boxShadow: `0 0 10px ${d.color}` }} />
-                      </div>
+                  <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/60 bg-black/40 px-4 py-1.5">
+                    <span className="text-primary text-sm font-bold">🛞 100% COMMUNITY DRIVEN</span>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm font-bold text-white/90 mb-2">
+                      <span>Community</span><span>100%</span>
                     </div>
-                  ))}
+                    <div className="h-4 rounded-full bg-black/50 overflow-hidden border border-primary/30">
+                      <div className="h-full rounded-full animate-shine" style={{ width: `100%`, background: "var(--gradient-gold)", boxShadow: `0 0 14px var(--gold)` }} />
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm md:text-base">
+                    No team allocation. No presale. No insider bags. Every $CBH belongs to the drivers — the community holds the wheel, the throttle, and the trophy.
+                  </p>
+                  <div className="grid grid-cols-3 gap-3 pt-2">
+                    {[
+                      { k: "Team", v: "0%" },
+                      { k: "Presale", v: "0%" },
+                      { k: "Community", v: "100%" },
+                    ].map(x => (
+                      <div key={x.k} className="rounded-xl border border-primary/30 bg-black/40 py-2">
+                        <p className="text-chunky text-lg md:text-xl leading-none">{x.v}</p>
+                        <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1">{x.k}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </GlassCard>
@@ -327,7 +357,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* ROADMAP */}
-      <section id="roadmap" className="relative py-24 px-4">
+      <section id="roadmap" className="relative py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14" data-reveal>
             <Ribbon>🏁 ROADMAP 🏁</Ribbon>
@@ -372,7 +402,7 @@ function Index() {
       <div className="h-6 track-border" />
 
       {/* COMMUNITY */}
-      <section id="community" className="relative py-24 px-4 overflow-hidden">
+      <section id="community" className="relative py-16 md:py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${heroAsset.url})`, filter: "blur(2px)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.15 0.1 145 / 0.7), oklch(0.22 0.12 145 / 0.9))" }} />
         <div className="relative max-w-4xl mx-auto text-center">
