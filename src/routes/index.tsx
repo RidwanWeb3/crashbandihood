@@ -111,10 +111,10 @@ function Index() {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <a href="#" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="X">
+            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="X">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="#" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Telegram">
+            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Telegram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
             </a>
             <a href={BUY_URL} target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center gap-1 rounded-xl px-4 py-2 text-sm font-bold rev-hover glow-gold border-2 border-[oklch(0.35_0.18_25)] overflow-hidden animate-shine"
@@ -412,14 +412,14 @@ function Index() {
             The pit stop is open. Join the fastest, loudest, most diamond-handed community on the track.
           </p>
           <div data-reveal className="flex flex-wrap justify-center gap-5">
-            <a href="#" className="group inline-flex items-center gap-3 rounded-2xl bg-black text-white px-8 py-5 border-2 border-primary rev-hover glow-green">
+            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl bg-black text-white px-8 py-5 border-2 border-primary rev-hover glow-green">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               <div className="text-left">
                 <div className="text-xs uppercase text-primary font-bold">Follow on</div>
                 <div className="text-xl font-bold">X / Twitter</div>
               </div>
             </a>
-            <a href="#" className="group inline-flex items-center gap-3 rounded-2xl px-8 py-5 border-2 border-primary rev-hover glow-green" style={{ background: "linear-gradient(135deg, #229ED9, #1B7DAC)" }}>
+            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl px-8 py-5 border-2 border-primary rev-hover glow-green" style={{ background: "linear-gradient(135deg, #229ED9, #1B7DAC)" }}>
               <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
               <div className="text-left text-white">
                 <div className="text-xs uppercase font-bold opacity-80">Join on</div>
@@ -447,10 +447,10 @@ function Index() {
             </div>
           </div>
           <div className="flex md:justify-end items-center gap-3">
-            <a href="#" aria-label="X" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" aria-label="X" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="#" aria-label="Telegram" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
             </a>
           </div>
