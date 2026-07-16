@@ -301,22 +301,34 @@ function Index() {
                 <div className="flex justify-center">
                   <Speedometer />
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-5 text-center md:text-left">
                   <h3 className="text-chunky text-3xl md:text-4xl">DISTRIBUTION</h3>
-                  {[
-                    { label: "Liquidity Pool", pct: 85, color: "var(--gold)" },
-                    { label: "Community Rewards", pct: 10, color: "var(--jungle)" },
-                    { label: "Marketing / CEX", pct: 5, color: "var(--crimson)" },
-                  ].map((d) => (
-                    <div key={d.label}>
-                      <div className="flex justify-between text-sm font-bold text-white/90 mb-1">
-                        <span>{d.label}</span><span>{d.pct}%</span>
-                      </div>
-                      <div className="h-3 rounded-full bg-black/50 overflow-hidden border border-primary/30">
-                        <div className="h-full rounded-full" style={{ width: `${d.pct}%`, background: d.color, boxShadow: `0 0 10px ${d.color}` }} />
-                      </div>
+                  <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/60 bg-black/40 px-4 py-1.5">
+                    <span className="text-primary text-sm font-bold">🛞 100% COMMUNITY DRIVEN</span>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-sm font-bold text-white/90 mb-2">
+                      <span>Community</span><span>100%</span>
                     </div>
-                  ))}
+                    <div className="h-4 rounded-full bg-black/50 overflow-hidden border border-primary/30">
+                      <div className="h-full rounded-full animate-shine" style={{ width: `100%`, background: "var(--gradient-gold)", boxShadow: `0 0 14px var(--gold)` }} />
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm md:text-base">
+                    No team allocation. No presale. No insider bags. Every $CBH belongs to the drivers — the community holds the wheel, the throttle, and the trophy.
+                  </p>
+                  <div className="grid grid-cols-3 gap-3 pt-2">
+                    {[
+                      { k: "Team", v: "0%" },
+                      { k: "Presale", v: "0%" },
+                      { k: "Community", v: "100%" },
+                    ].map(x => (
+                      <div key={x.k} className="rounded-xl border border-primary/30 bg-black/40 py-2">
+                        <p className="text-chunky text-lg md:text-xl leading-none">{x.v}</p>
+                        <p className="text-[10px] uppercase tracking-widest text-white/70 mt-1">{x.k}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </GlassCard>
