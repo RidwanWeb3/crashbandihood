@@ -69,17 +69,11 @@ function Index() {
   const [showModal, setShowModal] = useState(false);
   const [copied, setCopied] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const bannerRef = useRef<HTMLDivElement>(null);
   useReveal();
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
-      if (bannerRef.current) {
-        const rect = bannerRef.current.getBoundingClientRect();
-        const offset = rect.top * 0.3;
-        bannerRef.current.style.backgroundPosition = `center ${offset}px`;
-      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
