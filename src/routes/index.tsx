@@ -9,8 +9,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const BUY_URL = "https://pons.family/launchpad/0xb336ede5190d8d276ee9e9a51c6382c29d2ceaa2";
-const CHART_URL = "https://dexscreener.com/robinhood/0x26f22372c0c6614a25b1e52ccc2b93904c08fcf6";
+
 
 function Ribbon({ children }: { children: React.ReactNode }) {
   return (
@@ -68,7 +67,6 @@ function useReveal() {
 
 function Index() {
   const [showModal, setShowModal] = useState(false);
-  const [copied, setCopied] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useReveal();
 
@@ -80,12 +78,7 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const CA = "0xb336eDe5190D8D276eE9e9A51C6382c29d2CeAA2";
-  const copyCA = () => {
-    navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  };
+
 
   const nav = [
     { label: "Home", href: "#home" },
@@ -112,15 +105,11 @@ function Index() {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="X">
+            <a href="https://x.com/CrashBandihoods" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="X">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Telegram">
+            <a href="https://t.me/CrashBandihoodsol" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex w-9 h-9 items-center justify-center rounded-full border border-primary/40 text-white hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Telegram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
-            </a>
-            <a href={BUY_URL} target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center gap-1 rounded-xl px-4 py-2 text-sm font-bold rev-hover glow-gold border-2 border-[oklch(0.35_0.18_25)] overflow-hidden animate-shine"
-              style={{ background: "var(--gradient-gold)", color: "oklch(0.22 0.14 40)" }}>
-              Buy $CBH
             </a>
           </div>
         </div>
@@ -154,19 +143,7 @@ function Index() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4 animate-race-in" style={{ animationDelay: "0.2s" }}>
-              <GoldButton href={BUY_URL} external>🏆 Buy $CBH</GoldButton>
-              <GoldButton href={CHART_URL} external>📈 Chart</GoldButton>
               <CrimsonButton onClick={() => setShowModal(true)}>🎮 Play Game</CrimsonButton>
-            </div>
-
-            <div className="mt-8 max-w-lg animate-race-in" style={{ animationDelay: "0.4s" }}>
-              <div className="rounded-2xl border-2 border-primary/40 bg-black/50 backdrop-blur p-3 flex items-center gap-3">
-                <span className="text-xs font-bold text-primary uppercase whitespace-nowrap">CA:</span>
-                <code className="flex-1 text-sm text-white/80 truncate">{CA}</code>
-                <button onClick={copyCA} className="rounded-lg bg-primary text-primary-foreground px-3 py-1.5 text-xs font-bold rev-hover">
-                  {copied ? "✓ Copied" : "Copy"}
-                </button>
-              </div>
             </div>
           </div>
 
@@ -370,7 +347,7 @@ function Index() {
             <div className="hidden md:block absolute top-14 left-0 right-0 h-6 track-border rounded-full" />
             <div className="grid md:grid-cols-3 gap-8 relative">
               {[
-                { phase: "PHASE 1", title: "IGNITION", items: ["Fair launch on Pons", "Website & socials live", "First 1,000 drivers onboard", "Marketing burst"] },
+                { phase: "PHASE 1", title: "IGNITION", items: ["Fair launch on PumpFun", "Website & socials live", "First 1,000 drivers onboard", "Marketing burst"] },
                 { phase: "PHASE 2", title: "FULL THROTTLE", items: ["CoinGecko / CMC listings", "Community contests", "Meme & art bounties", "10K holders milestone"] },
                 { phase: "PHASE 3", title: "VICTORY LAP", items: ["Playable $CBH kart game beta", "CEX listings", "NFT racer collection", "Global tournament season"] },
               ].map((p, i) => (
@@ -414,14 +391,14 @@ function Index() {
             The pit stop is open. Join the fastest, loudest, most diamond-handed community on the track.
           </p>
           <div data-reveal className="flex flex-wrap justify-center gap-5">
-            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl bg-black text-white px-8 py-5 border-2 border-primary rev-hover glow-green">
+            <a href="https://x.com/CrashBandihoods" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl bg-black text-white px-8 py-5 border-2 border-primary rev-hover glow-green">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               <div className="text-left">
                 <div className="text-xs uppercase text-primary font-bold">Follow on</div>
                 <div className="text-xl font-bold">X / Twitter</div>
               </div>
             </a>
-            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl px-8 py-5 border-2 border-primary rev-hover glow-green" style={{ background: "linear-gradient(135deg, #229ED9, #1B7DAC)" }}>
+            <a href="https://t.me/CrashBandihoodsol" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-2xl px-8 py-5 border-2 border-primary rev-hover glow-green" style={{ background: "linear-gradient(135deg, #229ED9, #1B7DAC)" }}>
               <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
               <div className="text-left text-white">
                 <div className="text-xs uppercase font-bold opacity-80">Join on</div>
@@ -449,10 +426,10 @@ function Index() {
             </div>
           </div>
           <div className="flex md:justify-end items-center gap-3">
-            <a href="https://x.com/Crash_BandiHood" target="_blank" rel="noopener noreferrer" aria-label="X" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://x.com/CrashBandihoods" target="_blank" rel="noopener noreferrer" aria-label="X" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://t.me/CrashBandiHoodRH" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://t.me/CrashBandihoodsol" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="w-10 h-10 rounded-full border border-primary/40 flex items-center justify-center text-white hover:bg-primary hover:text-primary-foreground transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
             </a>
           </div>
